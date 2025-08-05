@@ -153,7 +153,7 @@ function displayCards(data) {
   const container = document.getElementById("cardContainer");
   container.innerHTML = data.map(place => `
     <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-      <div class="card h-100">
+      <div class="card place-card h-100">
         <img src="${place.img}" class="card-img-top" alt="${place.name}">
         <div class="card-body">
           <h5 class="card-title">${place.name}</h5>
@@ -172,7 +172,7 @@ function displaySimpleCards(data) {
   }
   container.innerHTML = data.map(item => `
     <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-      <div class="card h-100">
+      <div class="card place-card h-100">
         <img src="${item.img}" class="card-img-top" alt="${item.name}">
         <div class="card-body">
           <h5 class="card-title">${item.name}</h5>
