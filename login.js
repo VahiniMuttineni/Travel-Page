@@ -7,14 +7,19 @@ function checkLogin() {
   const correctPassword = "travel123";
 
   if (username === correctUsername && password === correctPassword) {
-    window.location.href = "index.html"; // redirect to main travel page
+    // Set login flag in localStorage
+    localStorage.setItem("loggedIn", "true");
+
+    // Redirect to main page
+    window.location.href = "index.html";
   } else {
     errorMsg.textContent = "Invalid username or password.";
   }
 
-  return false;
+  return false; // Prevent form submission
 }
 
+// Toggle password visibility
 document.getElementById("togglePassword").addEventListener("click", function () {
   const passwordField = document.getElementById("password");
   const icon = this;
